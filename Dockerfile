@@ -6,7 +6,7 @@ RUN apk update && \
     apk add nodejs npm python make curl g++
 
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./nginx/conf.d /usr/share/nginx/html
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 RUN chgrp -R root /var/cache/nginx /var/run /var/log/nginx && \
     chmod -R 770 /var/cache/nginx /var/run /var/log/nginx
