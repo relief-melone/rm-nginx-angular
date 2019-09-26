@@ -19,4 +19,4 @@ RUN chgrp -R root /var/cache/nginx /var/run /var/log/nginx && \
 
 EXPOSE 8080
 
-CMD ["nginx", "-g", "--with-http_stub_status_module", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
